@@ -17,7 +17,7 @@ def main():
             send_to_aws = False
             counter_itter = counter%4
             camera.capture(image_pth.format(counter_itter))
-            print('Taking picture number', counter.format(counter_itter), 'at', time.gmtime().tm_min)
+            print('Taking picture number', counter_itter, 'at', time.gmtime().tm_min)
             img_proc.add_image(image_pth.format(counter_itter))
             if counter%5 == 0:
                 send_to_aws = img_proc.make_decision()
