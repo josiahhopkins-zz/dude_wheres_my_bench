@@ -7,7 +7,7 @@ import send_sms
 
 def main():
     camera = picamera.PiCamera()
-    image_pth = '/images/image{}.jpg'
+    image_pth = 'image{}.jpg'
     counter = 0
     try:
         while True:
