@@ -9,7 +9,7 @@ import image_processor
 def main():
     camera = picamera.PiCamera()
     image_pth = 'image{}.jpg'
-    img_proc = image_processor()
+    img_proc = image_processor.image_processor()
     counter = 0
     try:
         while True:
