@@ -17,7 +17,7 @@ def main():
             send_to_aws = False
             camera.capture(image_pth.format(counter%5))
             print('Taking picture number', counter, 'at', time.gmtime().tm_min)
-            img_proc.add_image(image_pth)
+            img_proc.add_image(image_pth.format(counter%5))
             if counter%5 == 0:
                 send_to_aws = img_proc.make_decision()
                 print('Should I send this to aws?', send_to_aws)
