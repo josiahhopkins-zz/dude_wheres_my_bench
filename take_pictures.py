@@ -1,4 +1,5 @@
 import picamera
+import time
 # import <josiah class>
 
 def main():
@@ -7,6 +8,7 @@ def main():
     try:
         while True:
             camera.capture(image_pth)
+            print('taking picture at', time.gmtime().tm_min)
             # <josiah>.picture(image_pth)
             time.sleep(2)
     except KeyboardInterrupt:
