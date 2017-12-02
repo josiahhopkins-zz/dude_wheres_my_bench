@@ -3,8 +3,7 @@ import time
 import os
 import send_sms
 import image_processor
-# import <josiah>
-# import <phansa>
+import aws_rek
 
 def main():
     camera = picamera.PiCamera()
@@ -24,13 +23,13 @@ def main():
                 print('Should I send this to aws?', send_to_aws)
             if send_to_aws:
                 print('Sending to aws')
-                # occupied = <phansa>.send_to_aws()
+                occupied = aws_rek.check_human(image_pth.format(0))
                 print('Is it occupied?', occupied)
                 if not occupied:
                     print('Sending out text')
                     send_sms.send()
             counter += 1
-            time.sleep(3)
+            time.sleep(1)
     except KeyboardInterrupt:
         print('interrupted!')
 
