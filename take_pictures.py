@@ -1,4 +1,4 @@
-import piccamera
+import picamera
 # import <josiah class>
 
 def main():
