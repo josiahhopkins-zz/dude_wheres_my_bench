@@ -24,4 +24,4 @@ rsa==3.4.2
 s3transfer==0.1.12
 six==1.11.0
 twilio==6.9.1
-urllib3==1.22
+urllib3==1.24.2
